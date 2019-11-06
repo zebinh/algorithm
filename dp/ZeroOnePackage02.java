@@ -22,11 +22,7 @@ public class ZeroOnePackage02{
             for ( int j=0; j < W; j++) {
                 // 第一行要特殊处理
                 if (i == 0) {
-                    if (w[i] > j + 1) {
-                        tab[i][j] = 0;
-                    }else{
-                        tab[i][j] = tab[i][j-1];
-                    }
+                    tab[i][j] = w[i] > j + 1 ? 0 :  tab[i][j-1];
                 } else {
                     if (w[i] > j + 1){
                         tab[i][j] = tab[i - 1][j];
