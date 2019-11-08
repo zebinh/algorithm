@@ -38,7 +38,7 @@ public class MazeTest{
         } // ===打印迷宫结束
 
         // 向右走，先查查是否可以站在这个i, j+1 这个点上
-        if (canStand(i, j)) {
+        if (canStand(i, j+1)) {
             // 可以站在这个点上，站上去（标记已走过）
             maze[i][j] = 6;
             walk(i, j+1); // 往右走，进入下一个历史宇宙
@@ -47,21 +47,21 @@ public class MazeTest{
         }
 
         // 在最右历史宇宙中走不下去，向下走
-        if (canStand(i, j)) {
+        if (canStand(i+1, j)) {
             maze[i][j] = 6;
             walk(i+1, j);
             maze[i][j] = 1;
         }
 
         // 向左走
-        if (canStand(i, j)) {
+        if (canStand(i, j-1)) {
             maze[i][j] = 6;
             walk(i, j-1);
             maze[i][j] = 1;
         }
 
         // 向上走
-        if (canStand(i, j)) {
+        if (canStand(i-1, j)) {
             maze[i][j] = 6;
             walk(i - 1, j);
             maze[i][j] = 1;
@@ -85,7 +85,6 @@ public class MazeTest{
         if (maze[i][j] == 6) {
             return false;
         }
-
         return true;
     }
 }
