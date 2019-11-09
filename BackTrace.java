@@ -1,4 +1,7 @@
 
+/**
+ * 全排列，自我理解算法
+ */
 public class BackTrace{
 
     private static boolean flag[];
@@ -32,11 +35,7 @@ public class BackTrace{
         }
     }
 
-    private static void swap(int[] nums, int i, int start) {
-        int tmp = nums[i];
-        nums[i] = nums[start];
-        nums[start] = tmp;
-    }
+
 
     
 }
