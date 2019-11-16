@@ -10,7 +10,7 @@ public class FindInTwoArray{
             {1, 2, 3, 4, 5},
             {5, 6, 1, 2, 8}
         };
-        Find(3, array);
+        System.out.println(Find(9, array));
     }
 
     public static boolean Find(int target, int [][] array) {
@@ -19,7 +19,7 @@ public class FindInTwoArray{
 
         int i = 0, j = column-1;
         while (true) {
-            if (i > line || j < 0) {
+            if (i >= line || j < 0) {
                 return false;
             }
 
