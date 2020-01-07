@@ -1,8 +1,9 @@
 /**
- * å‰‘æŒ‡Offerï¼Œå­—ç¬¦ä¸²çš„æŽ’åˆ—
+ * ½£Ö¸Offer£¬×Ö·û´®µÄÅÅÁÐ
  */
 
 import java.util.ArrayList;
+import java.util.Collections;
 public class PermutationSolution {
 
     public static void main(String[] args) {
@@ -20,7 +21,9 @@ public class PermutationSolution {
         r = new ArrayList<>();
         StringBuilder sb = new StringBuilder(str);
         perm(sb, 0);
+        Collections.sort(r);
         return r;
+        
     }
 
     public static void perm(StringBuilder sb, int start){
