@@ -5,15 +5,15 @@
 public class InsertSort {
 
     public static int[] sortArray(int[] nums) {
-        
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i; j > 0; j--) {
-                if (nums[j] < nums[j-1]) {
-                    int tmp = nums[j];
-                    nums[j] = nums[j-1];
-                    nums[j-1] = tmp;
-                }
+
+        for (int i = 1; i < nums.length; i++) {
+            int tmp = nums[i];
+            int j = i - 1;
+            while (j >=0 && nums[j] > tmp) {
+                nums[j+1] = nums[j];
+                j--;
             }
+            nums[j+1] = tmp;
         }
         return nums;
     }
